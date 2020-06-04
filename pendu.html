@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+	<title>Le Pendu</title>
+    <meta charset="UTF-8">
+<style>
+  #joueur1
+	{
+		visibility:visible;
+	}
+	
+  #joueur2
+	{
+		visibility:hidden;
+	}
+  #echaffaud
+	{
+		background-color:lightgrey;
+		position:fixed;
+		top:0px;
+        left:700px;
+        box-shadow: 10px 5px 5px black;
+		visibility:hidden;
+        border-radius: 10px;
+	}
+  #restart,#hell{
+		visibility:hidden;
+        border-radius: 10px;
+    }
+    fieldset{
+        width: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px black;
+        background-color: #FC8D09;
+    }
+    #container{
+        box-shadow: 10px 5px 5px black;
+        border: solid;
+        background-color: #808080;
+        border-radius: 10px;
+    }
+    legend{
+        font-size: 2em;
+    }
+    h1{
+        text-decoration: underline;
+        text-shadow: 1px 1px 2px black;
+    }
+    #print{
+        font-size: 3em;
+    }
+    #motP1,#lettreP2,#valider,#tester{
+        border-radius: 10px;
+    }
+    #valider:hover,#tester:hover{
+        background-color: lawngreen;
+
+    }
+    #restart:hover{
+       background-color: red;
+    }
+	</style>
+
+</style>
+
+</head>
+<html>
+<body>
+<div id="container">
+<h1>LE PENDU</h1>
+
+<div id="joueur1" class="joueur">
+<fieldset>
+    <legend>Premier joueur</legend>
+<h3>Entrez un mot</h3>
+<input type="text" id="motP1"  autofocus />
+<input type="button" id="valider" value="Valider" />
+</fieldset>
+</div>
+
+<div id="joueur2" class="joueur">
+<fieldset>
+    <legend>Deuxieme joueur</legend>
+<h3>Entrez une lettre</h3>
+<input type="text" id="lettreP2"  autofocus/>
+<input type="button" id="tester" value="Tester" />
+</fieldset>
+</div>
+
+<p id="print"></p>
+<input type="button" id="restart" value="Recommencer"/>
+
+<div id="hell">
+<h2 id="win"></h2>
+<img src="bonbon.jpg" width="480" height="454" frameBorder="0" class="giphy-embed" />
+
+</div>
+
+</div>
+<canvas id="echaffaud" width="400px" height="600px"></canvas>
+
+<script src="pendu.js">
+</script>
+</body>
+</html>
